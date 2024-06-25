@@ -1,4 +1,7 @@
-// Array de frases aleatorias
+const int BAUD_RATE = 9600;
+const int DELAY_INTERVAL = 200;
+
+
 String frases[] = {
   "Hola mundo",
   "Arduino es genial.",
@@ -8,12 +11,15 @@ String frases[] = {
 };
 
 void setup() {
-  Serial.begin(9600); 
+  Serial.begin(BAUD_RATE);
+  if (!Serial) {
+    while (true);
+  } 
   randomSeed(analogRead(0)); 
 }
 
 void loop() {
   int indice = random(0, sizeof(frases) / sizeof(frases[0]));
   Serial.println(frases[indice]);
-  delay(2000);
+  delay(DELAY_INTERVAL);
 }
