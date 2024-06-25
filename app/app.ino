@@ -4,7 +4,7 @@ const int DELAY_INTERVAL = 200;
 
 String frases[] = {
   "Hola mundo",
-  "Arduino es genial.",
+  "Arduino es genial",
   "Programando en Arduino",
   "Construyendo en Arduino",
   "Hola desde Arduino"
